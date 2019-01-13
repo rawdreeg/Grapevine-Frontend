@@ -4,11 +4,18 @@ import SignUpForm from '@/components/Auth/SignUpForm'
 import LogInForm from '@/components/Auth/LogInForm'
 import UserProfileSettings from '@/components/User/Settings/UserProfileSettings'
 import UserPasswordSettings from '@/components/User/Settings/UserPasswordSettings'
+import Home from '@/components/Home'
+import SinglePost from '@/components/Post/SinglePost'
+
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path: '/',
+      component: Home
+    },
     {
       path: '/signup',
       component: SignUpForm
@@ -24,6 +31,11 @@ export default new Router({
     {
       path: '/settings/password',
       component: UserPasswordSettings
+    },
+    {
+      path: '/:username/status/:id',
+      component: SinglePost,
+      props: true
     }
   ]
 })
