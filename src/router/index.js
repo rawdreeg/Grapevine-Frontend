@@ -7,7 +7,6 @@ import UserPasswordSettings from '@/components/User/Settings/UserPasswordSetting
 import Home from '@/components/Home'
 import SinglePost from '@/components/Post/SinglePost'
 
-
 Vue.use(Router)
 
 export default new Router({

@@ -1,16 +1,16 @@
 <template>
-  <div class="ui stackable grid vertically padded container centered">
-    <div class="twelve wide column">
+  <div class="ui stackable grid vertically padded container ">
+    <div class="ten wide column">
       <UserSidebar :user="user" />
     </div>
-    <div class="twelve wide column ">
+    <div class="ten wide column ">
       <div class="ui segment">
         <h2 class="ui medium dividing header">Timeline</h2>
 
         <Posts :posts.sync="posts" :auth-user="user" />
       </div>
     </div>
-    <div class="twelve wide column"></div>
+    <div class="four wide column"></div>
   </div>
 </template>
 <script>
@@ -25,7 +25,7 @@ export default {
   },
   data() {
     return {
-      user: '',
+      user: {},
       posts: []
     }
   },
