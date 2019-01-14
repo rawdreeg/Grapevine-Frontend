@@ -1,5 +1,5 @@
 <template>
-  <div class="ui feed">
+  <div class="ui feed" v-if="posts.length > 0">
     <Post
         v-for="post in posts"
         :key="post.id"
@@ -8,6 +8,9 @@
         :replies="post.replies"
          v-on:delete="removeDeletedPost"
     />
+  </div>
+  <div class="ui feed" v-else>
+    <p> No posts on your timeline. Follow some people, invite friends :)</p>
   </div>
 </template>
 
@@ -30,7 +33,7 @@ export default {
       // add post to top of posts
       this.posts.unshift(post)
     },
-    removeDeletedPost(postId) {
+    removeDeletedPost (postId) {
       const filteredPosts = this.posts.filter(post => {
         return post.id !== postId
       })
@@ -48,6 +51,5 @@ export default {
       required: true
     }
   }
-} 
+}
 </script>
-

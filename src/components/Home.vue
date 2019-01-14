@@ -1,6 +1,6 @@
 <template>
   <div class="ui stackable grid vertically padded container ">
-    <div class="ten wide column">
+    <div class="sixteen wide column">
       <UserSidebar :user="user" />
     </div>
     <div class="ten wide column ">
@@ -10,18 +10,23 @@
         <Posts :posts.sync="posts" :auth-user="user" />
       </div>
     </div>
-    <div class="four wide column"></div>
+    <div class="six wide column">
+      <WhoToFollow/>
+    </div>
+
   </div>
 </template>
 <script>
 import UserSidebar from '@/components/User/UserSidebar'
 import Posts from '@/components/Post/Posts'
+import WhoToFollow from '@/components/User/WhoToFollow'
 
 export default {
   name: 'Home',
   components: {
     UserSidebar,
-    Posts
+    Posts,
+    WhoToFollow
   },
   data() {
     return {

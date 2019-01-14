@@ -77,7 +77,7 @@ export default {
     }
   },
   beforeRouteEnter (to, from, next) {
-    const token = localStorage.getItem('tweetr-token')
+    const token = localStorage.getItem('user-token')
 
     return token ? next('/') : next()
   },
