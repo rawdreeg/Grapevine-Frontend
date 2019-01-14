@@ -13,7 +13,7 @@
             :user="following" />
           </div>
           <div v-else class="ui three">
-            <h3>Nothing to show here :(</h3>
+            <p>Nothing to show here :(</p>
           </div>
         </div>
       </div>

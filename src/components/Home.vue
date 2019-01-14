@@ -1,5 +1,6 @@
 <template>
   <div class="ui stackable grid vertically padded container ">
+    <Nav />
     <div class="sixteen wide column">
       <UserSidebar :user="user" />
     </div>
@@ -20,13 +21,15 @@
 import UserSidebar from '@/components/User/UserSidebar'
 import Posts from '@/components/Post/Posts'
 import WhoToFollow from '@/components/User/WhoToFollow'
+import Nav from '@/components/Nav'
 
 export default {
   name: 'Home',
   components: {
     UserSidebar,
     Posts,
-    WhoToFollow
+    WhoToFollow,
+    Nav
   },
   data() {
     return {

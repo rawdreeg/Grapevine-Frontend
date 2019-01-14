@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Nav />
     <UserProfileHeader :user="user" :auth-user="authUser" />
     <div class="ui stackable grid container">
       <div class="sixteen wide column">
@@ -28,6 +29,7 @@ import UserProfileHeader from '@/components/User/Profile/UserProfileHeader'
 import UserProfileSidebarDetails from '@/components/User/Profile/UserProfileSidebarDetails'
 import WhoToFollow from '@/components/User/WhoToFollow'
 import Posts from '@/components/Post/Posts'
+import Nav from '@/components/Nav'
 
 export default {
   name: 'UserProfile',
@@ -35,7 +37,8 @@ export default {
     UserProfileSidebarDetails,
     UserProfileHeader,
     WhoToFollow,
-    Posts
+    Posts,
+    Nav
   },
   data() {
     return {
